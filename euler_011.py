@@ -63,6 +63,17 @@ def swne_diags(x, y, mold):
     else:
         return mold
 
+for i in range(20):
+    for j in range(16):
+        mold = checkhorizon(j, i, mold)
+print 'horizontal', mold
+
+
+for i in range(20):
+    for j in range(16):
+        #print 'i ', i, ' j ', j, ' m ', mold
+        mold = checkvert(i, j, mold)
+print 'vertical', mold
 
 # check NW/SE diagonals
 for i in range(20):
@@ -73,15 +84,3 @@ for i in range(20):
         mold = swne_diags(i, j, mold)
 
 print mold
-
-# for i in range(20):
-#     for j in range(16):
-#         mold = checkhorizon(j, i, mold)
-# print 'horizontal', mold
-#
-#
-# for i in range(20):
-#     for j in range(16):
-#         #print 'i ', i, ' j ', j, ' m ', mold
-#         mold = checkvert(i, j, mold)
-# print 'vertical', mold
